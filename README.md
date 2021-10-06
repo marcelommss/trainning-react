@@ -4,7 +4,7 @@ Part of @marcelommss software devlopment and technology trainning.
 
 Contact me on linkedin.com/marcelomms for more information about the trainning.
 
-<blockquote> Trainning guide - Web - Create an dashboard a pp in ReactJS </blockquote>
+<blockquote> Trainning guide - Web - Create an dashboard app in ReactJS </blockquote>
 
 
 Access our notion.so repository for detailed documentation.
