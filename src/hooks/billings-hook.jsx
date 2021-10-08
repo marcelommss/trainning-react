@@ -1,5 +1,5 @@
 import React, { createContext, useCallback, useReducer, useEffect, useContext }  from 'react';
-
+import { surname } from "react-lorem-ipsum";
 import { format } from 'date-fns'
 
 import api from '../services/api';
@@ -90,9 +90,19 @@ const BillingsProvider = ({ children }) => {
       if(!result)
         return;
 
+      if(process.env.REACT_APP_FAKE_DATA){
+        result = [...result.map(item=> {
+          return {
+            name: surname(),
+            incomesTotal: item.incomesTotal,
+            salesTotal: item.salesTotal,
+          };
+          })];
+      }
+
       dashboardDispatch({
         type: "SET_CARDS",
-        payload: result
+        payload: result,
       });
         
     }).catch(async (err)=> {

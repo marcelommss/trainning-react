@@ -1,4 +1,5 @@
 import React, { createContext, useCallback, useReducer, useEffect, useContext }  from 'react';
+import { username } from "react-lorem-ipsum";
 
 import api from '../services/api';
 
@@ -35,7 +36,16 @@ const ProductsProvider = ({ children }) => {
       if(!result)
         return;
 
-      console.log('result', result);
+      if(process.env.REACT_APP_FAKE_DATA){
+        result = [...result.map(item=> {
+          return {
+            name: username(),
+            code: item.code,
+            totalValue: item.totalValue,
+            totalVolume: item.totalVolume,
+          };
+          })];
+      }
 
       productDispatch({
         type: "LOAD_PRODUCTS",
