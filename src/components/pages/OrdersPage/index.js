@@ -1,18 +1,18 @@
-import DashboardView from '../../views/BillingsDashboard';
+import DashboardView from '../../views/OrdersDashboard';
 
-import { BillingsProvider } from '../../../hooks/billing-dashboard-hook';
+import { OrdersProvider } from '../../../hooks/orders-hook';
 
 import { Container, Title } from './styles';
 
-function BillingsPage() {
+function OrdersPage() {
   return (
     <Container>
       <Title>Orders</Title>
-      <BillingsProvider>
+      <OrdersProvider>
         <DashboardView />
-      </BillingsProvider>
+      </OrdersProvider>
     </Container>
   );
 }
 
-export default BillingsPage;
+export default OrdersPage;

@@ -1,8 +1,6 @@
 import{ BsFillBarChartFill } from 'react-icons/bs';
-import{ FcMoneyTransfer } from 'react-icons/fc';
-import{ FaMapMarkerAlt } from 'react-icons/fa';
+import{ FaMoneyCheckAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import{ AiFillAppstore } from 'react-icons/ai';
-
 
 import { Wrapper, Container, ListContainer } from './styles';
 
@@ -11,9 +9,9 @@ import NavigationButton from './NavigationButton';
 
 import { useApplication } from '../../../../hooks/app-hook';
 
-function Siderbar() {
+function Siderbar({ props }) {
 
-  const { application, switchApp } = useApplication();
+  const { page, changePage , switchApp } = useApplication();
 
   const items = [
     {
@@ -27,17 +25,23 @@ function Siderbar() {
     {
       name: 'Billings',
       icon: <BsFillBarChartFill />,
-      active: true
+      active: page === '/' || page === '/billings',
+      onClick: () => {
+        changePage('/billings');
+      }
     },
     {
       name: 'Orders',
-      icon: <FcMoneyTransfer />,
-      active: false
+      icon: <FaMoneyCheckAlt />,
+      active: page === '/orders',
+      onClick: () => {
+        changePage('/orders');
+      }
     },
     {
       name: 'Map',
       icon: <FaMapMarkerAlt />,
-      active: false
+      active: page === '/map',
     },    
   ]
   return (
