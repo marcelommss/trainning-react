@@ -6,7 +6,7 @@ Contact me on linkedin.com/marcelomms for more information about the trainning.
 
 <blockquote> Trainning guide - Web - Create an dashboard app in ReactJS </blockquote>
 
-![DashboardImage](https://github.com/marcelommss/trainning-react/blob/main/design/dashboard-app.png)
+![DashboardImage](https://github.com/marcelommss/trainning-react/blob/main/design/dashboard-app-orders.png)
 
 Access our notion.so repository for detailed documentation.
 
