@@ -17,7 +17,7 @@ const ApplicationProvider = ({ children }) => {
     setPage(link);
     if(history)
       history.push(link);
-  } , [page]);
+  } , [page, history]);
 
   const switchApp = useCallback(() => {
     if(application === 'trainning'){
