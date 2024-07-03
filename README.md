@@ -1,8 +1,12 @@
 # Software Development Trainning
 
-Part of @marcelommss software devlopment and technology trainning.
+@marcelommss software devlopment and technology trainning.
 
 Contact me on linkedin.com/marcelomms for more information about the trainning.
+
+
+I use this trainning to prepare my squad for building Qlik Mashups in React.
+
 
 <blockquote> Trainning guide - Web - Create an dashboard app in ReactJS </blockquote>
 
